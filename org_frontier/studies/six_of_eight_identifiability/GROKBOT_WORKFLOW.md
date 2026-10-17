@@ -26,7 +26,7 @@ Do not relabel ChatGPT's research and the GitHub runner's computation as Grokbot
 2. Run the canonical controls and full exact four-model analysis in the lab environment.
 3. Verify the one-intervention result (input 110) and the two-intervention full-TPM result.
 4. Investigate whether equal whole-system Φ and (W,S) major-complex Φ in model (a=1,b=0) reflects ties in the lab's maximal-complex selection convention.
-5. Reproduce the numeric manifest checks and full relevant tests, update the study documentation from genuine receipts.
+5. Independently reproduce the state-111 subsystem tie audit and the numeric manifest checks, run the full relevant tests, and update the study documentation from genuine receipts.
 6. Record the actual Grokbot workflow, prompt, commands, changes, limitations and review outcome.
 7. Prepare and submit the upstream PR to `contrib`, noting the model-only validation boundary.
 

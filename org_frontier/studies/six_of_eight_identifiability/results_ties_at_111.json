@@ -1,0 +1,168 @@
+{
+  "method": "PyPhi IIT-4.0 new_big_phi.all_complexes, without Φ approximation",
+  "models": {
+    "a0_b0": {
+      "all_positive_phi_subsystems": [
+        {
+          "nodes": [
+            "W",
+            "S",
+            "C"
+          ],
+          "phi": 2
+        },
+        {
+          "nodes": [
+            "S",
+            "C"
+          ],
+          "phi": 2
+        },
+        {
+          "nodes": [
+            "W",
+            "S"
+          ],
+          "phi": 2
+        }
+      ],
+      "highest_phi_subsystems": [
+        {
+          "nodes": [
+            "W",
+            "S",
+            "C"
+          ],
+          "phi": 2
+        },
+        {
+          "nodes": [
+            "S",
+            "C"
+          ],
+          "phi": 2
+        },
+        {
+          "nodes": [
+            "W",
+            "S"
+          ],
+          "phi": 2
+        }
+      ],
+      "peak_subsystem_phi": 2,
+      "selected_major_complex": [
+        "W",
+        "S",
+        "C"
+      ]
+    },
+    "a0_b1": {
+      "all_positive_phi_subsystems": [
+        {
+          "nodes": [
+            "W",
+            "S"
+          ],
+          "phi": 2
+        }
+      ],
+      "highest_phi_subsystems": [
+        {
+          "nodes": [
+            "W",
+            "S"
+          ],
+          "phi": 2
+        }
+      ],
+      "peak_subsystem_phi": 2,
+      "selected_major_complex": [
+        "W",
+        "S"
+      ]
+    },
+    "a1_b0": {
+      "all_positive_phi_subsystems": [
+        {
+          "nodes": [
+            "W",
+            "S",
+            "C"
+          ],
+          "phi": 2
+        },
+        {
+          "nodes": [
+            "S",
+            "C"
+          ],
+          "phi": 2
+        },
+        {
+          "nodes": [
+            "W",
+            "S"
+          ],
+          "phi": 2
+        }
+      ],
+      "highest_phi_subsystems": [
+        {
+          "nodes": [
+            "W",
+            "S",
+            "C"
+          ],
+          "phi": 2
+        },
+        {
+          "nodes": [
+            "S",
+            "C"
+          ],
+          "phi": 2
+        },
+        {
+          "nodes": [
+            "W",
+            "S"
+          ],
+          "phi": 2
+        }
+      ],
+      "peak_subsystem_phi": 2,
+      "selected_major_complex": [
+        "W",
+        "S",
+        "C"
+      ]
+    },
+    "a1_b1": {
+      "all_positive_phi_subsystems": [
+        {
+          "nodes": [
+            "W",
+            "S"
+          ],
+          "phi": 2
+        }
+      ],
+      "highest_phi_subsystems": [
+        {
+          "nodes": [
+            "W",
+            "S"
+          ],
+          "phi": 2
+        }
+      ],
+      "peak_subsystem_phi": 2,
+      "selected_major_complex": [
+        "W",
+        "S"
+      ]
+    }
+  },
+  "scope": "exploratory posthoc subsystem SIA tie audit at state (1,1,1)"
+}

@@ -66,6 +66,12 @@ def main():
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(result, encoding="utf-8")
     print(result, end="")
+    sizes = [len(report["models"][key]["highest_phi_subsystems"])
+             for key in ("a0_b0", "a0_b1", "a1_b0", "a1_b1")]
+    print("TIE_AUDIT_111 " + " ".join(
+        "%s=%d" % (k, n)
+        for k, n in zip(("a0_b0", "a0_b1", "a1_b0", "a1_b1"), sizes)
+    ))
 
 
 if __name__ == "__main__":

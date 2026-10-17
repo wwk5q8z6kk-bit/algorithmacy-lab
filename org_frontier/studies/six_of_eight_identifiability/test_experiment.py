@@ -70,3 +70,17 @@ def test_exact_iit_controls_with_pyphi():
     }
     assert models["a1_b0"]["major_complex"] == ["W", "S"]
     assert models["a0_b0"]["major_complex"] == ["W", "S", "C"]
+
+
+def test_exploratory_tied_subsystems_at_111():
+    pytest.importorskip("pyphi")
+    from org_frontier.studies.six_of_eight_identifiability.tie_audit import run_audit
+    audit = run_audit()
+    for key in ("a0_b0", "a1_b0"):
+        tied = {tuple(item["nodes"]) for item in audit["models"][key]["highest_phi_subsystems"]}
+        assert tied == {("W", "S", "C"), ("S", "C"), ("W", "S")}
+        assert audit["models"][key]["peak_subsystem_phi"] == 2.0
+    for key in ("a0_b1", "a1_b1"):
+        assert audit["models"][key]["highest_phi_subsystems"] == [
+            {"nodes": ["W", "S"], "phi": 2.0}
+        ]

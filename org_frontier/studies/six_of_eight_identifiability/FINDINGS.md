@@ -55,9 +55,11 @@ This is identification conditional on the four-completion restriction; it is **n
 
 The exact implementation returns the major complex (W,S) with Φ 2.0 for completion (a=1,b=0), even though its maximum whole-system Φ_MIP is also 2.0 and its whole-form classification is triadic.
 
-This distinction must be reported: whole-system irreducibility and membership of the returned maximal complex are different outputs. The equal values may involve complex-selection/tie conventions; this experiment did not enumerate all tied complexes. It would be inappropriate to describe completion (1,0) unambiguously as a three-member **major complex**, or the excluded node as a proven real-world spectator.
+This distinction must be reported: whole-system irreducibility, a selected maximum across all reachable states, and state-conditional maximal-complex membership are different outputs. The **posthoc exploratory tie audit** in `results_ties_at_111.json` enumerated all positive-Φ subsystems at state 111 with `pyphi.new_big_phi.all_complexes`.
 
-For both dyadic whole-form models, the reported (W,S) major complex has Φ 2.0. This independently reinforces that a nonzero proper-subsystem core Φ does not establish whole-system triadicity.
+At state **111**, models (0,0) and (1,0) each have **three equal-maximum Φ=2.0 subsystem analyses**: (W,S,C), (S,C), and (W,S). On those models at state 111, `new_big_phi.maximal_complex` selected (W,S,C). Yet the lab's `org_frontier.probes.lib.major_complex` helper, which selects the first strictly greatest maximal-complex Φ encountered **across reachable states**, returned (W,S) for model (1,0). This is a **state/tie-selection dependence of the reported major complex**, not proof that C is excluded by a uniquely defined maximal core. The posthoc result must remain distinct from the preregistered primary whole-form comparison.
+
+For both dyadic whole-form models, (W,S) was the single top-Φ subsystem at state 111, with Φ=2.0. This reinforces that a nonzero proper-subsystem Φ does not establish whole-system triadicity.
 
 ## Interpretation and limitations
 

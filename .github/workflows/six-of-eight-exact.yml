@@ -43,6 +43,10 @@ jobs:
         run: |
           python -m org_frontier.studies.six_of_eight_identifiability.tie_audit \
             --output org_frontier/studies/six_of_eight_identifiability/results_ties_at_111.json
+      - name: Reproduce state-111 subsystem tie audit
+        env:
+          PYPHI_WELCOME_OFF: "true"
+        run: python ci/reproduce.py six-of-eight-subsystem-ties
       - name: Reproduce exact verdicts
         env:
           PYPHI_WELCOME_OFF: "true"

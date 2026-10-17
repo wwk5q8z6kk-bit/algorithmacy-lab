@@ -37,7 +37,7 @@ The hypothesis precommitment is in a separate earlier commit. Any exact-computat
 
 The fork's dedicated GitHub Actions run [39062046064](https://github.com/wwk5q8z6kk-bit/algorithmacy-lab/actions/runs/39062046064) completed the canonical validation, all 7 focused tests and all four exact IIT-4.0 computations. The four whole-system verdicts, in (a,b) order (00,01,10,11), are **triadic Φ=2.0; dyadic Φ=0.0; triadic Φ=2.0; dyadic Φ=0.0**. The single transition query at state 110 identifies the binary verdict for this family; both 100 and 110 are needed to identify every missing rule bit.
 
-The recorded major complex for model (a=1,b=0) is (W,S), even though whole-system Φ=2.0. Report full-system irreducibility separately from selected complex membership; the complex-selection tie convention has not been fully audited.
+The model (a=1,b=0) returns (W,S) from the cross-state `major_complex` helper despite whole-system Φ=2.0. The completed exploratory audit shows that **three subsystems tie at Φ=2.0 at state 111**, including the full (W,S,C) system; see `results_ties_at_111.json`. The selected complex depends on state and tie selection, so it does not prove any excluded node is a spectator.
 
 Reproduce all exact values using `python ci/reproduce.py six-of-eight-exact-verdicts` in the supported environment. Machine-readable results are committed in `results_exact.json`. The study remains in-silico. No Grokbot execution has been claimed.
 
