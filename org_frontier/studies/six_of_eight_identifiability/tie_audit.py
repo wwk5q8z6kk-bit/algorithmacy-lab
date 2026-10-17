@@ -61,7 +61,8 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--output", type=Path)
     args = p.parse_args()
-    result = json.dumps(run_audit(), indent=2, sort_keys=True) + "\n"
+    report = run_audit()
+    result = json.dumps(report, indent=2, sort_keys=True) + "\n"
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(result, encoding="utf-8")
