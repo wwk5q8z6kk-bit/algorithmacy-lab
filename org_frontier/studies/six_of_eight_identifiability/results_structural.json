@@ -1,0 +1,71 @@
+{
+  "A_B_distinguishing_interventions": [
+    "100",
+    "110"
+  ],
+  "basis": "synthetic deterministic Boolean rules, no field observations",
+  "four_completions": {
+    "a0_b0": {
+      "at_100": "000",
+      "at_110": "101",
+      "reachable_states": [
+        "000",
+        "010",
+        "101",
+        "111"
+      ]
+    },
+    "a0_b1": {
+      "at_100": "000",
+      "at_110": "111",
+      "reachable_states": [
+        "000",
+        "010",
+        "101",
+        "111"
+      ]
+    },
+    "a1_b0": {
+      "at_100": "010",
+      "at_110": "101",
+      "reachable_states": [
+        "000",
+        "010",
+        "101",
+        "111"
+      ]
+    },
+    "a1_b1": {
+      "at_100": "010",
+      "at_110": "111",
+      "reachable_states": [
+        "000",
+        "010",
+        "101",
+        "111"
+      ]
+    }
+  },
+  "full_rule_identification": {
+    "minimum_queries": 2,
+    "query_sets": [
+      [
+        "100",
+        "110"
+      ]
+    ]
+  },
+  "observed_rows": {
+    "101": "010",
+    "111": "111",
+    "000": "000",
+    "001": "000",
+    "010": "101",
+    "011": "101"
+  },
+  "state_order": "WSC (classifier bit index W=0,S=1,C=2)",
+  "unobserved_states": [
+    "100",
+    "110"
+  ]
+}
