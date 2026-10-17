@@ -393,6 +393,7 @@ Multi-experiment batteries on one theme.
 - **[Scaling laws closed-form (#47)](org_frontier/studies/scaling_laws_closed_form/README.md)** — See [`../mincut_mip/`](../mincut_mip/) and `FORMAL_THEORY_ARC.md`
 - **[Shared-mediator k-lift (V3 #6)](org_frontier/studies/shared_mediator_k/README.md)** — merge under AND with **Φ = 2k** (k=1,2,3 → Φ=2,4,6; full cores). OR
 - **[Shared-mediator ternary (beyond-binary)](org_frontier/studies/shared_mediator_ternary/README.md)** — {0,1}^5 cube. Exact **IIT-4.0** on this lab's PyPhi pin **cannot** ingest a
+- **[Six-of-eight counterfactual identifiability](org_frontier/studies/six_of_eight_identifiability/README.md)** — The exact four-completion analysis was run on GitHub Actions using the lab's existing PyPhi IIT-4.0 classifier and major-complex implementation
 - **[Small-world rewire vs hierarchy (agenda #17)](org_frontier/studies/small_world_vs_hierarchy/README.md)** — ring's size-independent Φ = 4 cap with hub growth (Φ = n−1). Interior morphs
 - **[Spanning mediator atop multi-hub (agenda #20)](org_frontier/studies/spanning_mediator_multihub/README.md)** — raise Φ beyond the pool ceiling. Under recurrent hub-span it **recreates the
 - **[Spectral topology-invariant feature (agenda #21)](org_frontier/studies/spectral_invariant/README.md)** — (`P_spectral_gap`) is the best cross-family ranker on this panel
