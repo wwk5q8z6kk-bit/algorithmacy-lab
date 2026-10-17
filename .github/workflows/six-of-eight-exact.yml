@@ -1,0 +1,49 @@
+name: Six-of-eight exact IIT research
+
+on:
+  push:
+    branches:
+      - research/six-of-eight-counterfactual-identifiability
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-reproduction:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install lab dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+          python -m pip install pytest
+      - name: Validate IIT-4.0 instrument
+        env:
+          PYPHI_WELCOME_OFF: "true"
+        run: python -m org_frontier.classifier.validate
+      - name: Verify six-of-eight tests
+        env:
+          PYPHI_WELCOME_OFF: "true"
+        run: python -m pytest org_frontier/studies/six_of_eight_identifiability/test_experiment.py -q
+      - name: Compute exact four-completion verdicts and major complexes
+        env:
+          PYPHI_WELCOME_OFF: "true"
+        run: |
+          python -m org_frontier.studies.six_of_eight_identifiability.experiment --exact \
+            --output org_frontier/studies/six_of_eight_identifiability/results_exact.json
+      - name: Reproduce structural witness
+        run: python ci/reproduce.py six-of-eight-observational-witness
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: six-of-eight-exact-results
+          if-no-files-found: warn
+          path: |
+            org_frontier/studies/six_of_eight_identifiability/results_exact.json
+            org_frontier/studies/six_of_eight_identifiability/results_structural.json
