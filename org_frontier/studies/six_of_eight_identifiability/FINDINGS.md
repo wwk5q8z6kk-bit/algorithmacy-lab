@@ -1,27 +1,84 @@
-# Findings — six-of-eight counterfactual identifiability
+# Six-of-eight: results and identification boundary
 
-## Verified structural witness
+## Source and execution
 
-Six observed transitions are:
-- 000→000
-- 001→000
-- 010→101
-- 011→101
-- 101→010
-- 111→111
+The exact four-completion analysis was run on GitHub Actions using the lab's existing PyPhi IIT-4.0 classifier and major-complex implementation. The canonical instrument controls passed, the focused test suite passed (7 tests), and the structural CI reproduction check passed.
 
-The observed support is forward-invariant. Four admissible deterministic completions generate the same trajectories from every observed state. The alternatives disagree only at the two missing rows (100 and 110).
+- **Execution:** https://github.com/wwk5q8z6kk-bit/algorithmacy-lab/actions/runs/39062046064
+- **Results artifact:** `results_exact.json`, generated from that run; not manually invented numbers.
+- **Runtime:** Python 3.12.15, PyPhi IIT-4.0 branch resolved to Git commit `b78d0e342d37175cbd55cf35a6d52ae035b4c50f`.
+- **Pre-registration:** commit `e25e5be1c550779f288c23b170a59621775a9832`, made before the new four-completion outcome calculation.
+- **Instrument:** `org_frontier.classifier.classifier.classify_rules` and `org_frontier.probes.lib.major_complex`.
+- **Scope:** in-silico Boolean models, no observed organization or field evidence.
 
-For strict mediation, the counterfactual rows are 100→000 and 110→101. For relay, they are 100→010 and 110→111. Either query distinguishes these two reference models. To identify the **full transition table** among all four completions, both state interventions are necessary and sufficient.
+## Identical observations
 
-## Exact IIT-4.0 results
+Six observed transitions form an invariant support for every completion:
 
-NOT YET COMPUTED in this execution environment. PyPhi is not installed locally and installing it is blocked by container network restrictions. The preregistered four-model exact computation, major complexes and minimum number of queries required to identify the **verdict only** remain to be executed using the repository's PyPhi environment. No exact numeric values for the two mixed-rule completions are claimed.
+| Input (WSC) | Common next state |
+|---|---|
+| 000 | 000 |
+| 001 | 000 |
+| 010 | 101 |
+| 011 | 101 |
+| 101 | 010 |
+| 111 | 111 |
 
-## Initial tests
+All six-state trajectories are identical for all four completions regardless of observation horizon. The only unobserved inputs are 100 and 110.
 
-The corresponding pure-Python locally executed implementation passed six structural tests, with one PyPhi-gated integration test skipped. The committed branch's test module should be rerun in the supported environment. No upstream CI success is claimed.
+## Exact Φ screen
 
-## Limits and relationship to prior work
+Under the precommitted restriction that W'=S and C'=S globally, and only the two missing mediator outputs `a=S'(100)` and `b=S'(110)` vary:
 
-Constructed deterministic Boolean rules; no field data or organizational inference. The causal rules outside observable support are not established by the observational trajectories. The strict-mediation and relay verdicts were known before the preregistration. The separate q221 draft addresses a different identifiability question about pairwise recurrence profiles.
+| a | b | next(100) | next(110) | Max whole-system Φ_MIP | Whole-form verdict | Reported major complex | Complex Φ |
+|---:|---:|---|---|---:|---|---|---:|
+| 0 | 0 | 000 | 101 | 2.0 | triadic | (W,S,C) | 2.0 |
+| 0 | 1 | 000 | 111 | 0.0 | dyadic | (W,S) | 2.0 |
+| 1 | 0 | 010 | 101 | 2.0 | triadic | (W,S) | 2.0 |
+| 1 | 1 | 010 | 111 | 0.0 | dyadic | (W,S) | 2.0 |
+
+All reported whole-system Φ profiles over the four states reachable after one update are 0 at 000, 010 and 101; the maximal value is at 111 for the two triadic completions.
+
+**H1:** CONFIRMED by Boolean enumeration (known structural witness).  
+**H2:** CONFIRMED by existing strict-mediation (Φ 2.0) and relay (Φ 0.0) controls.  
+**H3:** SUPPORTED: observationally compatible completions have different exact whole-system verdicts.  
+**H4:** CONFIRMED: both 100 and 110 distinguish the two reference models.  
+**H5:** The **single** intervention at 110 identifies the *binary whole-system verdict* over the four-model family. **Both** interventions 100 and 110 are required to identify the full TPM in the same family.
+
+### Decision rule
+
+With W'/C' globally fixed as preregistered, querying input state 110 distinguishes `b=0` (observed next state 101, **triadic**) from `b=1` (observed next state 111, **dyadic**). Querying 100 alone cannot identify the binary verdict.
+
+This is identification conditional on the four-completion restriction; it is **not** a general one-intervention guarantee for arbitrary three-node TPMs.
+
+### The major-complex caveat
+
+The exact implementation returns the major complex (W,S) with Φ 2.0 for completion (a=1,b=0), even though its maximum whole-system Φ_MIP is also 2.0 and its whole-form classification is triadic.
+
+This distinction must be reported: whole-system irreducibility and membership of the returned maximal complex are different outputs. The equal values may involve complex-selection/tie conventions; this experiment did not enumerate all tied complexes. It would be inappropriate to describe completion (1,0) unambiguously as a three-member **major complex**, or the excluded node as a proven real-world spectator.
+
+For both dyadic whole-form models, the reported (W,S) major complex has Φ 2.0. This independently reinforces that a nonzero proper-subsystem core Φ does not establish whole-system triadicity.
+
+## Interpretation and limitations
+
+These exact calculations establish a structural **non-identifiability witness** for the stipulated Boolean family. Observational equivalence is a limitation of the sampled support, not a failure of the exact computation. The most informative missing transition is selected from the specific set of admissible models, not from data about real coordination.
+
+An operational field protocol should report which counterfactual transitions are supported by evidence, what alternative rule completions remain admissible, whether exact-Φ verdicts disagree among them, and which feasible observation/intervention would resolve the disagreement.
+
+An intervention into input state 110 may be impossible in a real system; absent such evidence, the empirical verdict remains unidentified.
+
+The original A/B contrast is pre-existing lab knowledge. The extension here is an executable four-completion identification procedure and a concrete distinction between identifying a verdict and reconstructing all rules. The finding does not itself validate the construct for an organization, infer intentions, or establish clinical or social implications.
+
+## Reproduction
+
+From repository root, with the requirements installed:
+
+```bash
+export PYPHI_WELCOME_OFF=true
+python -m org_frontier.classifier.validate
+python -m pytest org_frontier/studies/six_of_eight_identifiability/test_experiment.py -q
+python -m org_frontier.studies.six_of_eight_identifiability.experiment --exact
+python ci/reproduce.py six-of-eight-observational-witness
+```
+
+The exact per-state outputs and model comparisons are in `results_exact.json` and the corresponding GitHub Actions run.

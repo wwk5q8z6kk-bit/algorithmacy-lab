@@ -1,35 +1,33 @@
-# Grokbot hackathon — workflow handoff and provenance
+# Hackathon workflow and provenance — six-of-eight experiment
 
-## Assignment
+## Research objective
 
-Reproduce the six-of-eight observation witness. Run the complete four-model exact-Φ study with the lab's PyPhi IIT-4.0 stack, validate canonical controls, compute the major complexes, establish the minimum diagnostic state intervention for the **binary verdict**, add complete reproducibility entries to ci/reproduce.json, and document every result.
+Demonstrate whether identical observations leave exact IIT-4.0 coordination classification underdetermined, and identify the minimum diagnostic counterfactual query.
 
-## Existing work and attribution
+## Recorded execution
 
-The initial code, preregistration and structural checks were authored/executed by a ChatGPT assistant. **Grokbot has not been run on this experiment.** The workflow must not attribute this work to Grokbot or claim that Grokbot executed an exact IIT analysis.
+- The study design and structural implementation were authored through a ChatGPT assistant. Six standard-library tests passed locally and one PyPhi-dependent test was skipped locally.
+- The prerequisite preregistration was committed at `e25e5be1c550779f288c23b170a59621775a9832` before the new exact four-model screen.
+- The ChatGPT assistant added a GitHub Actions workflow on the public fork and triggered it by a branch commit.
+- **Actual exact computation:** GitHub Actions run https://github.com/wwk5q8z6kk-bit/algorithmacy-lab/actions/runs/39062046064, completed successfully.
+- Environment: Python 3.12.15, PyPhi IIT-4.0 branch resolved to commit `b78d0e342d37175cbd55cf35a6d52ae035b4c50f`.
+- The exact IIT instrument controls passed, **7** focused tests passed, and the named structural CI reproduction check passed.
+- The exact results were copied into `results_exact.json` from the successful workflow run and interpreted in FINDINGS.md.
 
-- Frozen precommitment: e25e5be1c550779f288c23b170a59621775a9832.
-- Six-state structural witness: implemented with standard Python, local structural checks passed.
-- Exact PyPhi and major-complex results: not yet executed.
-- External PR CI: not yet verified.
+## Grokbot attribution
 
-## Grokbot run instructions
+**No Grokbot execution has been recorded or claimed.** The hackathon requires actual Grokbot participation. To complete that requirement, point Grokbot at the branch and have it independently reproduce the exact output, audit the identifiability logic, optionally investigate tied major-complex membership, and document the actual invocation, actions, results, corrections and responsible human decisions.
 
-1. Record the Grokbot version and actual start command.
-2. Inspect the repo's AGENTS.md and the frozen hypotheses, then run the canonical instrument controls.
-3. Run the module with --exact and save results_exact.json.
-4. Report every completion, including null and unstable results; verify the minimum verdict-identifying subset.
-5. Run focused pytest tests and all applicable repository gates.
-6. Add reproducible numeric expectations to ci/reproduce.json; document environment versions, timings, hashes and exact commands.
-7. Record any correction made by Grokbot and any human intervention.
-8. Update FINDINGS.md with **actually computed** values and submit a review-ready PR against contrib.
+Do not relabel ChatGPT's research and the GitHub runner's computation as Grokbot actions.
 
-## Actual Grokbot receipts
+## Grokbot continuation checklist
 
-- Grokbot invocation: pending.
-- Autonomous actions: pending.
-- Exact Φ outputs: pending.
-- Reproducibility checks: pending.
-- Human interventions or corrections: pending.
+1. Review the research precommitment and exact output independently.
+2. Run the canonical controls and full exact four-model analysis in the lab environment.
+3. Verify the one-intervention result (input 110) and the two-intervention full-TPM result.
+4. Investigate whether equal whole-system Φ and (W,S) major-complex Φ in model (a=1,b=0) reflects ties in the lab's maximal-complex selection convention.
+5. Reproduce the numeric manifest checks and full relevant tests, update the study documentation from genuine receipts.
+6. Record the actual Grokbot workflow, prompt, commands, changes, limitations and review outcome.
+7. Prepare and submit the upstream PR to `contrib`, noting the model-only validation boundary.
 
-Do not invent this record. The submission is provisional until real Grokbot execution occurs.
+Only record steps actually performed.
