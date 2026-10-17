@@ -37,8 +37,17 @@ jobs:
         run: |
           python -m org_frontier.studies.six_of_eight_identifiability.experiment --exact \
             --output org_frontier/studies/six_of_eight_identifiability/results_exact.json
+      - name: Reproduce exact verdicts
+        env:
+          PYPHI_WELCOME_OFF: "true"
+        run: python ci/reproduce.py six-of-eight-exact-verdicts
       - name: Reproduce structural witness
         run: python ci/reproduce.py six-of-eight-observational-witness
+      - name: Check generated indexes
+        run: |
+          python tools/build_index.py --check
+          python tools/build_map.py --check
+          python org_frontier/research/build_research_index.py --check
       - uses: actions/upload-artifact@v4
         if: always()
         with:

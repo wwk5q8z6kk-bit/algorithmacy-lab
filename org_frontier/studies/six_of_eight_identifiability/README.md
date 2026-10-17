@@ -33,4 +33,12 @@ A computational result is evidence about these Boolean models. It does not show 
 
 The hypothesis precommitment is in a separate earlier commit. Any exact-computation result should be committed only after actually running it. The original references' A/B outcomes are known controls, not blind confirmatory discoveries.
 
-See FINDINGS.md and GROKBOT_WORKFLOW.md for results status and authenticated hackathon attribution.
+## Verified exact results (2026-10-17)
+
+The fork's dedicated GitHub Actions run [39062046064](https://github.com/wwk5q8z6kk-bit/algorithmacy-lab/actions/runs/39062046064) completed the canonical validation, all 7 focused tests and all four exact IIT-4.0 computations. The four whole-system verdicts, in (a,b) order (00,01,10,11), are **triadic Φ=2.0; dyadic Φ=0.0; triadic Φ=2.0; dyadic Φ=0.0**. The single transition query at state 110 identifies the binary verdict for this family; both 100 and 110 are needed to identify every missing rule bit.
+
+The recorded major complex for model (a=1,b=0) is (W,S), even though whole-system Φ=2.0. Report full-system irreducibility separately from selected complex membership; the complex-selection tie convention has not been fully audited.
+
+Reproduce all exact values using `python ci/reproduce.py six-of-eight-exact-verdicts` in the supported environment. Machine-readable results are committed in `results_exact.json`. The study remains in-silico. No Grokbot execution has been claimed.
+
+See FINDINGS.md and GROKBOT_WORKFLOW.md for full interpretation, limits and authenticated attribution.

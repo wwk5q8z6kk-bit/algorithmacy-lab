@@ -62,4 +62,11 @@ def test_exact_iit_controls_with_pyphi():
     assert len(models) == 4
     assert models["a0_b0"]["verdict"] == "triadic"
     assert models["a1_b1"]["verdict"] == "dyadic"
-    assert r["exact_iit_4"]["minimum_queries_to_identify_verdict"]["minimum_queries"] in (1, 2)
+    assert r["exact_iit_4"]["minimum_queries_to_identify_verdict"] == {
+        "minimum_queries": 1, "query_sets": [["110"]]}
+    assert {k: (v["verdict"], v["max_phi"]) for k, v in models.items()} == {
+        "a0_b0": ("triadic", 2.0), "a0_b1": ("dyadic", 0.0),
+        "a1_b0": ("triadic", 2.0), "a1_b1": ("dyadic", 0.0),
+    }
+    assert models["a1_b0"]["major_complex"] == ["W", "S"]
+    assert models["a0_b0"]["major_complex"] == ["W", "S", "C"]

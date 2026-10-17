@@ -183,6 +183,16 @@ def main():
         args.output.write_text(result, encoding="utf-8")
     print("SIX_OF_EIGHT_OBSERVED=6 HIDDEN=2 COMPLETIONS=4 SUPPORT_INVARIANT=TRUE")
     print(result, end="")
+    if args.exact:
+        models = report["exact_iit_4"]["models"]
+        qinfo = report["exact_iit_4"]["minimum_queries_to_identify_verdict"]
+        parts = [
+            "%s=%s:%.6f" % (k, models[k]["verdict"], models[k]["max_phi"])
+            for k in ("a0_b0", "a0_b1", "a1_b0", "a1_b1")
+        ]
+        qsets = "+".join("/".join(q) for q in qinfo["query_sets"])
+        print("EXACT_COMPLETIONS " + " ".join(parts)
+              + " MIN_VERDICT_QUERIES=%d:%s" % (qinfo["minimum_queries"], qsets))
 
 
 if __name__ == "__main__":
