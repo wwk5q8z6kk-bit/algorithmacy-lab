@@ -37,6 +37,12 @@ jobs:
         run: |
           python -m org_frontier.studies.six_of_eight_identifiability.experiment --exact \
             --output org_frontier/studies/six_of_eight_identifiability/results_exact.json
+      - name: Audit tied subsystem Φ at state 111 (exploratory)
+        env:
+          PYPHI_WELCOME_OFF: "true"
+        run: |
+          python -m org_frontier.studies.six_of_eight_identifiability.tie_audit \
+            --output org_frontier/studies/six_of_eight_identifiability/results_ties_at_111.json
       - name: Reproduce exact verdicts
         env:
           PYPHI_WELCOME_OFF: "true"
@@ -56,3 +62,4 @@ jobs:
           path: |
             org_frontier/studies/six_of_eight_identifiability/results_exact.json
             org_frontier/studies/six_of_eight_identifiability/results_structural.json
+            org_frontier/studies/six_of_eight_identifiability/results_ties_at_111.json
