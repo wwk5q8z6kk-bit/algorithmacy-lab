@@ -53,4 +53,11 @@ def test_actual_exact_sixty_four_completions():
     out = exact()
     assert len(out["exact_iit_4"]["models"]) == 64
     assert sum(out["exact_iit_4"]["verdict_counts"].values()) == 64
-    assert out["exact_iit_4"]["query_analysis"]["minimum_global_queries"] in (1, 2)
+    assert out["exact_iit_4"]["verdict_counts"] == {"triadic": 48, "dyadic": 16}
+    assert out["exact_iit_4"]["phi_min"] == 0.0
+    assert out["exact_iit_4"]["phi_max"] == 2.0
+    assert out["exact_iit_4"]["query_analysis"]["minimum_global_queries"] == 2
+    assert out["exact_iit_4"]["query_analysis"]["sufficient_minimal_query_sets"] == [["100", "110"]]
+    singleton = {tuple(x["states"]): x for x in out["exact_iit_4"]["query_analysis"]["candidate_subsets"]}
+    assert singleton[("100",)]["ambiguous_outcome_groups"] == 8
+    assert singleton[("110",)]["ambiguous_outcome_groups"] == 2

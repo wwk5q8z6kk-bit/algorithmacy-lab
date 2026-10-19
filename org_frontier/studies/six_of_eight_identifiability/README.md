@@ -42,3 +42,16 @@ The model (a=1,b=0) returns (W,S) from the cross-state `major_complex` helper de
 Reproduce all exact values using `python ci/reproduce.py six-of-eight-exact-verdicts` in the supported environment. Machine-readable results are committed in `results_exact.json`. The study remains in-silico. No Grokbot execution has been claimed.
 
 See FINDINGS.md and GROKBOT_WORKFLOW.md for full interpretation, limits and authenticated attribution.
+
+## Posthoc 64-completion stress test
+
+The exploratory full-row analysis drops the assumed global W'/C' rules at the two unobserved inputs, allowing all eight possible next-state vectors for each missing row. All **64** completions remain observationally identical from the same six-state support.
+
+Their exact-Φ outcomes are **48 triadic, 16 dyadic**; the full-range exact Φ is **0–2**. Crucially, **one intervention no longer identifies the verdict universally**. Both inputs 100 and 110 are required in the worst case. Querying 110 first resolves the verdict after one query in 48 of 64 model completions; the remaining cases require a second query at 100. This is a posthoc model-sensitivity finding, not evidence about real coordination.
+
+Reproduce with:
+```bash
+python -m org_frontier.studies.six_of_eight_identifiability.exploratory_full_rows --exact
+```
+See [EXPLORATORY_64_PROTOCOL.md](EXPLORATORY_64_PROTOCOL.md), [results_exploratory_64.json](results_exploratory_64.json), and [FINDINGS.md](FINDINGS.md).
+

@@ -53,6 +53,10 @@ jobs:
         run: |
           python -m org_frontier.studies.six_of_eight_identifiability.exploratory_full_rows --exact \
             --output org_frontier/studies/six_of_eight_identifiability/results_exploratory_64.json
+      - name: Reproduce exploratory 64-completion verdicts
+        env:
+          PYPHI_WELCOME_OFF: "true"
+        run: python ci/reproduce.py six-of-eight-exploratory-64
       - name: Reproduce state-111 subsystem tie audit
         env:
           PYPHI_WELCOME_OFF: "true"

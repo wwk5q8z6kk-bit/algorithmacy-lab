@@ -31,3 +31,9 @@ Do not relabel ChatGPT's research and the GitHub runner's computation as Grokbot
 7. Prepare and submit the upstream PR to `contrib`, noting the model-only validation boundary.
 
 Only record steps actually performed.
+
+## Posthoc extension: authenticated computational record
+
+The separate 64-completion protocol was committed at `fb18ffff2ee04a26065ca68b19ca8d624d62257c` before its new exact screen. A GitHub Actions runner performed the exploratory 64-model IIT computation, with **48 triadic and 16 dyadic outcomes**, and confirmed that two interventions are needed in the worst case under the relaxed assumptions. The first successful run was https://github.com/wwk5q8z6kk-bit/algorithmacy-lab/actions/runs/39180309965. These results were produced by ChatGPT-directed code and the GitHub runner, not by Grokbot.
+
+The optional Grokbot requirement remains unfulfilled until Grokbot actually operates on the branch and its actions are documented.

@@ -71,6 +71,35 @@ An intervention into input state 110 may be impossible in a real system; absent 
 
 The original A/B contrast is pre-existing lab knowledge. The extension here is an executable four-completion identification procedure and a concrete distinction between identifying a verdict and reconstructing all rules. The finding does not itself validate the construct for an organization, infer intentions, or establish clinical or social implications.
 
+
+## Posthoc robustness: all 64 missing-row completions
+
+The separately committed [EXPLORATORY_64_PROTOCOL.md](EXPLORATORY_64_PROTOCOL.md) relaxed the assumption that W' and C' are known at the two unobserved inputs. Each missing **complete three-bit next-state vector** is independently allowed to be any of eight values. This yields 8 × 8 = **64** full deterministic transition tables, all of which match the six recorded rows and all trajectories initiated within the observed invariant support.
+
+The lab's **exact PyPhi IIT-4.0** classifier was run on every one. Outcomes:
+
+- **48 triadic, 16 dyadic** whole-system verdicts, exact Φ ranging from **0.0 to 2.0**. These are counts of admissible designed models, not statistical frequencies in organizations.
+- Neither **query 100 alone** nor **query 110 alone** determines the verdict for **every** member of the 64-model family. The universally sufficient diagnostic subset is **{100,110}**, requiring two interventions in the worst case.
+- Querying 100 alone leaves **all eight possible outcomes** ambiguous: each outcome is compatible with both verdicts.
+- Querying 110 alone leaves **two of eight outcomes** ambiguous, namely **101** (7 triadic, 1 dyadic) and **110** (1 triadic, 7 dyadic). The remaining six outcomes unambiguously identify the verdict under this finite family.
+
+| Observed next state after setting 110 | Triadic completions | Dyadic completions | Verdict identifiable? |
+|---|---:|---:|---|
+| 000 | 8 | 0 | Yes — triadic |
+| 001 | 8 | 0 | Yes — triadic |
+| 010 | 8 | 0 | Yes — triadic |
+| 011 | 8 | 0 | Yes — triadic |
+| 100 | 8 | 0 | Yes — triadic |
+| 101 | 7 | 1 | **No** |
+| 110 | 1 | 7 | **No** |
+| 111 | 0 | 8 | Yes — dyadic |
+
+An adaptive *synthetic* diagnostic can therefore query state 110 first, then query 100 only if the result is 101 or 110. This strategy always identifies the model-family verdict with **at most two** interventions, and stops after one for **48 of the 64** model completions. That count is combinatorial, not an empirical probability; an expected intervention count requires a separately specified prior over candidate models.
+
+The original four-model control verdicts are preserved exactly within the larger family. In that restricted family, 110 alone still suffices. The one-query conclusion **does not generalize** without the globally known non-mediator rules. This dependence on substantive assumptions is the extension's central sensitivity finding.
+
+The extension is **posthoc exploratory** and must not be presented as a preregistered confirmatory result. Its numeric outputs are saved in [results_exploratory_64.json](results_exploratory_64.json). Verified hosted computation: https://github.com/wwk5q8z6kk-bit/algorithmacy-lab/actions/runs/39180309965 (five exploratory tests passed).
+
 ## Reproduction
 
 From repository root, with the requirements installed:

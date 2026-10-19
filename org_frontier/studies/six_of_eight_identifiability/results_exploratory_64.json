@@ -1,0 +1,650 @@
+{
+  "analysis_type": "posthoc exploratory extension",
+  "exact_iit_4": {
+    "instrument": "lab classify_rules + PyPhi IIT-4.0",
+    "models": {
+      "000_000": {
+        "n_reachable_states_scored": 4,
+        "next_state_100": "000",
+        "next_state_110": "000",
+        "whole_system_phi": 1.0,
+        "whole_system_verdict": "triadic"
+      },
+      "000_001": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "000",
+        "next_state_110": "001",
+        "whole_system_phi": 1.0,
+        "whole_system_verdict": "triadic"
+      },
+      "000_010": {
+        "n_reachable_states_scored": 4,
+        "next_state_100": "000",
+        "next_state_110": "010",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "000_011": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "000",
+        "next_state_110": "011",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "000_100": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "000",
+        "next_state_110": "100",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "000_101": {
+        "n_reachable_states_scored": 4,
+        "next_state_100": "000",
+        "next_state_110": "101",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "000_110": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "000",
+        "next_state_110": "110",
+        "whole_system_phi": 0.0,
+        "whole_system_verdict": "dyadic"
+      },
+      "000_111": {
+        "n_reachable_states_scored": 4,
+        "next_state_100": "000",
+        "next_state_110": "111",
+        "whole_system_phi": 0.0,
+        "whole_system_verdict": "dyadic"
+      },
+      "001_000": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "001",
+        "next_state_110": "000",
+        "whole_system_phi": 1.0,
+        "whole_system_verdict": "triadic"
+      },
+      "001_001": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "001",
+        "next_state_110": "001",
+        "whole_system_phi": 1.0,
+        "whole_system_verdict": "triadic"
+      },
+      "001_010": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "001",
+        "next_state_110": "010",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "001_011": {
+        "n_reachable_states_scored": 6,
+        "next_state_100": "001",
+        "next_state_110": "011",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "001_100": {
+        "n_reachable_states_scored": 6,
+        "next_state_100": "001",
+        "next_state_110": "100",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "001_101": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "001",
+        "next_state_110": "101",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "001_110": {
+        "n_reachable_states_scored": 6,
+        "next_state_100": "001",
+        "next_state_110": "110",
+        "whole_system_phi": 0.0,
+        "whole_system_verdict": "dyadic"
+      },
+      "001_111": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "001",
+        "next_state_110": "111",
+        "whole_system_phi": 0.0,
+        "whole_system_verdict": "dyadic"
+      },
+      "010_000": {
+        "n_reachable_states_scored": 4,
+        "next_state_100": "010",
+        "next_state_110": "000",
+        "whole_system_phi": 1.0,
+        "whole_system_verdict": "triadic"
+      },
+      "010_001": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "010",
+        "next_state_110": "001",
+        "whole_system_phi": 1.0,
+        "whole_system_verdict": "triadic"
+      },
+      "010_010": {
+        "n_reachable_states_scored": 4,
+        "next_state_100": "010",
+        "next_state_110": "010",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "010_011": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "010",
+        "next_state_110": "011",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "010_100": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "010",
+        "next_state_110": "100",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "010_101": {
+        "n_reachable_states_scored": 4,
+        "next_state_100": "010",
+        "next_state_110": "101",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "010_110": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "010",
+        "next_state_110": "110",
+        "whole_system_phi": 0.0,
+        "whole_system_verdict": "dyadic"
+      },
+      "010_111": {
+        "n_reachable_states_scored": 4,
+        "next_state_100": "010",
+        "next_state_110": "111",
+        "whole_system_phi": 0.0,
+        "whole_system_verdict": "dyadic"
+      },
+      "011_000": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "011",
+        "next_state_110": "000",
+        "whole_system_phi": 1.0,
+        "whole_system_verdict": "triadic"
+      },
+      "011_001": {
+        "n_reachable_states_scored": 6,
+        "next_state_100": "011",
+        "next_state_110": "001",
+        "whole_system_phi": 1.0,
+        "whole_system_verdict": "triadic"
+      },
+      "011_010": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "011",
+        "next_state_110": "010",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "011_011": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "011",
+        "next_state_110": "011",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "011_100": {
+        "n_reachable_states_scored": 6,
+        "next_state_100": "011",
+        "next_state_110": "100",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "011_101": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "011",
+        "next_state_110": "101",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "011_110": {
+        "n_reachable_states_scored": 6,
+        "next_state_100": "011",
+        "next_state_110": "110",
+        "whole_system_phi": 0.0,
+        "whole_system_verdict": "dyadic"
+      },
+      "011_111": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "011",
+        "next_state_110": "111",
+        "whole_system_phi": 0.0,
+        "whole_system_verdict": "dyadic"
+      },
+      "100_000": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "100",
+        "next_state_110": "000",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "100_001": {
+        "n_reachable_states_scored": 6,
+        "next_state_100": "100",
+        "next_state_110": "001",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "100_010": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "100",
+        "next_state_110": "010",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "100_011": {
+        "n_reachable_states_scored": 6,
+        "next_state_100": "100",
+        "next_state_110": "011",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "100_100": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "100",
+        "next_state_110": "100",
+        "whole_system_phi": 0.41503749927884376,
+        "whole_system_verdict": "triadic"
+      },
+      "100_101": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "100",
+        "next_state_110": "101",
+        "whole_system_phi": 0.41503749927884376,
+        "whole_system_verdict": "triadic"
+      },
+      "100_110": {
+        "n_reachable_states_scored": 6,
+        "next_state_100": "100",
+        "next_state_110": "110",
+        "whole_system_phi": 0.0,
+        "whole_system_verdict": "dyadic"
+      },
+      "100_111": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "100",
+        "next_state_110": "111",
+        "whole_system_phi": 0.0,
+        "whole_system_verdict": "dyadic"
+      },
+      "101_000": {
+        "n_reachable_states_scored": 4,
+        "next_state_100": "101",
+        "next_state_110": "000",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "101_001": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "101",
+        "next_state_110": "001",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "101_010": {
+        "n_reachable_states_scored": 4,
+        "next_state_100": "101",
+        "next_state_110": "010",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "101_011": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "101",
+        "next_state_110": "011",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "101_100": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "101",
+        "next_state_110": "100",
+        "whole_system_phi": 0.8300749985576875,
+        "whole_system_verdict": "triadic"
+      },
+      "101_101": {
+        "n_reachable_states_scored": 4,
+        "next_state_100": "101",
+        "next_state_110": "101",
+        "whole_system_phi": 0.41503749927884376,
+        "whole_system_verdict": "triadic"
+      },
+      "101_110": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "101",
+        "next_state_110": "110",
+        "whole_system_phi": 0.2766916661858958,
+        "whole_system_verdict": "triadic"
+      },
+      "101_111": {
+        "n_reachable_states_scored": 4,
+        "next_state_100": "101",
+        "next_state_110": "111",
+        "whole_system_phi": 0.0,
+        "whole_system_verdict": "dyadic"
+      },
+      "110_000": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "110",
+        "next_state_110": "000",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "110_001": {
+        "n_reachable_states_scored": 6,
+        "next_state_100": "110",
+        "next_state_110": "001",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "110_010": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "110",
+        "next_state_110": "010",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "110_011": {
+        "n_reachable_states_scored": 6,
+        "next_state_100": "110",
+        "next_state_110": "011",
+        "whole_system_phi": 2.0,
+        "whole_system_verdict": "triadic"
+      },
+      "110_100": {
+        "n_reachable_states_scored": 6,
+        "next_state_100": "110",
+        "next_state_110": "100",
+        "whole_system_phi": 0.41503749927884376,
+        "whole_system_verdict": "triadic"
+      },
+      "110_101": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "110",
+        "next_state_110": "101",
+        "whole_system_phi": 0.41503749927884376,
+        "whole_system_verdict": "triadic"
+      },
+      "110_110": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "110",
+        "next_state_110": "110",
+        "whole_system_phi": 0.0,
+        "whole_system_verdict": "dyadic"
+      },
+      "110_111": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "110",
+        "next_state_110": "111",
+        "whole_system_phi": 0.0,
+        "whole_system_verdict": "dyadic"
+      },
+      "111_000": {
+        "n_reachable_states_scored": 4,
+        "next_state_100": "111",
+        "next_state_110": "000",
+        "whole_system_phi": 1.0,
+        "whole_system_verdict": "triadic"
+      },
+      "111_001": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "111",
+        "next_state_110": "001",
+        "whole_system_phi": 0.20751874963942188,
+        "whole_system_verdict": "triadic"
+      },
+      "111_010": {
+        "n_reachable_states_scored": 4,
+        "next_state_100": "111",
+        "next_state_110": "010",
+        "whole_system_phi": 1.0,
+        "whole_system_verdict": "triadic"
+      },
+      "111_011": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "111",
+        "next_state_110": "011",
+        "whole_system_phi": 0.20751874963942188,
+        "whole_system_verdict": "triadic"
+      },
+      "111_100": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "111",
+        "next_state_110": "100",
+        "whole_system_phi": 0.8300749985576875,
+        "whole_system_verdict": "triadic"
+      },
+      "111_101": {
+        "n_reachable_states_scored": 4,
+        "next_state_100": "111",
+        "next_state_110": "101",
+        "whole_system_phi": 0.0,
+        "whole_system_verdict": "dyadic"
+      },
+      "111_110": {
+        "n_reachable_states_scored": 5,
+        "next_state_100": "111",
+        "next_state_110": "110",
+        "whole_system_phi": 0.0,
+        "whole_system_verdict": "dyadic"
+      },
+      "111_111": {
+        "n_reachable_states_scored": 4,
+        "next_state_100": "111",
+        "next_state_110": "111",
+        "whole_system_phi": 0.0,
+        "whole_system_verdict": "dyadic"
+      }
+    },
+    "phi_max": 2.0,
+    "phi_min": 0.0,
+    "query_analysis": {
+      "candidate_subsets": [
+        {
+          "ambiguity_witnesses": [
+            {
+              "example_pair": [
+                "000_110",
+                "000_000"
+              ],
+              "n_models": 64,
+              "outcome": []
+            }
+          ],
+          "ambiguous_outcome_groups": 1,
+          "distinct_outcome_groups": 1,
+          "is_sufficient": false,
+          "models_in_ambiguous_groups": 64,
+          "states": []
+        },
+        {
+          "ambiguity_witnesses": [
+            {
+              "example_pair": [
+                "000_110",
+                "000_000"
+              ],
+              "n_models": 8,
+              "outcome": [
+                "000"
+              ]
+            },
+            {
+              "example_pair": [
+                "001_110",
+                "001_000"
+              ],
+              "n_models": 8,
+              "outcome": [
+                "001"
+              ]
+            },
+            {
+              "example_pair": [
+                "010_110",
+                "010_000"
+              ],
+              "n_models": 8,
+              "outcome": [
+                "010"
+              ]
+            },
+            {
+              "example_pair": [
+                "011_110",
+                "011_000"
+              ],
+              "n_models": 8,
+              "outcome": [
+                "011"
+              ]
+            },
+            {
+              "example_pair": [
+                "100_110",
+                "100_000"
+              ],
+              "n_models": 8,
+              "outcome": [
+                "100"
+              ]
+            },
+            {
+              "example_pair": [
+                "101_111",
+                "101_000"
+              ],
+              "n_models": 8,
+              "outcome": [
+                "101"
+              ]
+            },
+            {
+              "example_pair": [
+                "110_110",
+                "110_000"
+              ],
+              "n_models": 8,
+              "outcome": [
+                "110"
+              ]
+            },
+            {
+              "example_pair": [
+                "111_101",
+                "111_000"
+              ],
+              "n_models": 8,
+              "outcome": [
+                "111"
+              ]
+            }
+          ],
+          "ambiguous_outcome_groups": 8,
+          "distinct_outcome_groups": 8,
+          "is_sufficient": false,
+          "models_in_ambiguous_groups": 64,
+          "states": [
+            "100"
+          ]
+        },
+        {
+          "ambiguity_witnesses": [
+            {
+              "example_pair": [
+                "111_101",
+                "000_101"
+              ],
+              "n_models": 8,
+              "outcome": [
+                "101"
+              ]
+            },
+            {
+              "example_pair": [
+                "000_110",
+                "101_110"
+              ],
+              "n_models": 8,
+              "outcome": [
+                "110"
+              ]
+            }
+          ],
+          "ambiguous_outcome_groups": 2,
+          "distinct_outcome_groups": 8,
+          "is_sufficient": false,
+          "models_in_ambiguous_groups": 16,
+          "states": [
+            "110"
+          ]
+        },
+        {
+          "ambiguity_witnesses": [],
+          "ambiguous_outcome_groups": 0,
+          "distinct_outcome_groups": 64,
+          "is_sufficient": true,
+          "models_in_ambiguous_groups": 0,
+          "states": [
+            "100",
+            "110"
+          ]
+        }
+      ],
+      "full_transition_table_requires_queries": 2,
+      "minimum_global_queries": 2,
+      "sufficient_minimal_query_sets": [
+        [
+          "100",
+          "110"
+        ]
+      ]
+    },
+    "verdict_counts": {
+      "dyadic": 16,
+      "triadic": 48
+    }
+  },
+  "num_completions": 64,
+  "observed_rows": {
+    "000": "000",
+    "001": "000",
+    "010": "101",
+    "011": "101",
+    "101": "010",
+    "111": "111"
+  },
+  "observed_support": [
+    "000",
+    "001",
+    "010",
+    "011",
+    "101",
+    "111"
+  ],
+  "reference_witnesses": {
+    "relay": "010_111",
+    "strict_mediation": "000_101"
+  },
+  "unique_transition_tables": 64,
+  "unobserved_rows": [
+    "100",
+    "110"
+  ]
+}

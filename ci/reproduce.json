@@ -7006,6 +7006,15 @@
       ],
       "timeout": 180,
       "source": "org_frontier/studies/six_of_eight_identifiability/FINDINGS.md"
+    },
+    {
+      "name": "six-of-eight-exploratory-64",
+      "cmd": "python -m org_frontier.studies.six_of_eight_identifiability.exploratory_full_rows --exact",
+      "expect": [
+        "EXPLORATORY_64 total=64 triadic=48 dyadic=16 min_verdict_queries=2:100/110 phi_min=0.000000 phi_max=2.000000"
+      ],
+      "timeout": 240,
+      "source": "org_frontier/studies/six_of_eight_identifiability/FINDINGS.md"
     }
   ]
 }
