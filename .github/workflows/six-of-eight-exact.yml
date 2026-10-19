@@ -43,6 +43,16 @@ jobs:
         run: |
           python -m org_frontier.studies.six_of_eight_identifiability.tie_audit \
             --output org_frontier/studies/six_of_eight_identifiability/results_ties_at_111.json
+      - name: Run exploratory 64-completion tests
+        env:
+          PYPHI_WELCOME_OFF: "true"
+        run: python -m pytest org_frontier/studies/six_of_eight_identifiability/test_exploratory_full_rows.py -q
+      - name: Compute exploratory 64 completions
+        env:
+          PYPHI_WELCOME_OFF: "true"
+        run: |
+          python -m org_frontier.studies.six_of_eight_identifiability.exploratory_full_rows --exact \
+            --output org_frontier/studies/six_of_eight_identifiability/results_exploratory_64.json
       - name: Reproduce state-111 subsystem tie audit
         env:
           PYPHI_WELCOME_OFF: "true"
@@ -67,3 +77,4 @@ jobs:
             org_frontier/studies/six_of_eight_identifiability/results_exact.json
             org_frontier/studies/six_of_eight_identifiability/results_structural.json
             org_frontier/studies/six_of_eight_identifiability/results_ties_at_111.json
+            org_frontier/studies/six_of_eight_identifiability/results_exploratory_64.json
