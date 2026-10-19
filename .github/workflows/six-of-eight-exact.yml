@@ -82,3 +82,15 @@ jobs:
             org_frontier/studies/six_of_eight_identifiability/results_structural.json
             org_frontier/studies/six_of_eight_identifiability/results_ties_at_111.json
             org_frontier/studies/six_of_eight_identifiability/results_exploratory_64.json
+
+      - name: Bundle complete reproducible hackathon study
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: six-of-eight-hackathon-package
+          if-no-files-found: error
+          path: |
+            org_frontier/studies/six_of_eight_identifiability/*.py
+            org_frontier/studies/six_of_eight_identifiability/*.md
+            org_frontier/studies/six_of_eight_identifiability/*.json
+            .github/workflows/six-of-eight-exact.yml
