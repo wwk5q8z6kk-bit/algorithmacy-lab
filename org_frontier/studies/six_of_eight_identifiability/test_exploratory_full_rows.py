@@ -1,10 +1,10 @@
 """Structural tests and optional exact IIT-4.0 tests for the posthoc 64-model panel."""
 import pytest
-from .exploratory_full_rows import (
+from org_frontier.studies.six_of_eight_identifiability.exploratory_full_rows import (
     enumerate_completions, model_id, query_analysis, rule_functions,
     structural, exact,
 )
-from .experiment import ALL_STATES, OBSERVED, UNOBSERVED, bits, label, rules, step
+from org_frontier.studies.six_of_eight_identifiability.experiment import ALL_STATES, OBSERVED, UNOBSERVED, bits, label, rules, step
 
 
 def test_sixty_four_distinct_models_agree_on_observed_transitions():
